@@ -114,7 +114,7 @@ public class Cell {
     public boolean isLegal(CellStatus colour, Cell[][] cells){
         CellStatus opponent = colour == CellStatus.LIGHT ? CellStatus.DARK : CellStatus.LIGHT;
         int score = 0;
-        ArrayList<DirectedMove> moves = new ArrayList<DirectedMove>();
+        ArrayList<DirectedMove> moves = new ArrayList<>();
         int[][] DIRS = {{-1,-1}, {-1,0}, {-1,1}, {0,1}, {0,-1}, {1,1}, {1,0}, {1,-1}};
 
         for (int[] dir : DIRS){
