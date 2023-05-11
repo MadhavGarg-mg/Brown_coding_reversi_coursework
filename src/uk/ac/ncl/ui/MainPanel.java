@@ -125,7 +125,9 @@ public class MainPanel extends JFrame {
                 ActionListener taskPerformer = ae -> MoveOpponent(opponent);
                 setUpTimer(taskPerformer);
             } else {
-                missedMoves += 1;
+                grayCells.remove(tempEl);
+                missedMoves += moveChecker.findPotentialMoves(PLAYERS_CELL_STATUS).size() > 0 ? 1 : 2;
+                CheckNextMove(moveChecker);
             }
         }
         else{
