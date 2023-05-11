@@ -63,6 +63,7 @@ public class MoveChecker {
                 d_col += dir[1];
             }
         }
+        cell.colourTemp(colour == OPPONENTS_CELL_STATUS ? OPPONENTS_COLOUR: PLAYERS_COLOUR, false);
     }
 
     /**
